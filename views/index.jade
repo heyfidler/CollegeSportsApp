@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	div.container
+		div.row
+			div.col-md-4
+				form#searchForm
+					div.form-group
+					label(for="stateSel") Select state:
+					select.form-control(id="stateSel" name="stateSel")
+						each state in states
+							option #{state}
+			div.col-md-8
+				div#collegeData
